@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IronPulse Fitness – Gym in Jayanagar, Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5f2;--surface:#fff;--ink:#14161a;--muted:#5d636d;--line:#e2e0da;--acc:#d63c08;--on-acc:#fff;--head:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0f12;--surface:#161a20;--ink:#f1f2f4;--muted:#9aa1ab;--line:#262b33;--acc:#ff6a2b;--on-acc:#111;--head:#0d0f12}}
+:root[data-theme="dark"]{--bg:#0d0f12;--surface:#161a20;--ink:#f1f2f4;--muted:#9aa1ab;--line:#262b33;--acc:#ff6a2b;--on-acc:#111;--head:#0d0f12}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Barlow",system-ui,sans-serif;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--head);z-index:30}
+h1,h2,h3{font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--head);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 26px "Barlow Condensed",sans-serif;text-transform:uppercase;text-decoration:none}
+.logo b{color:var(--acc)}
+nav{display:flex;gap:20px;align-items:center;font-weight:500}
+nav a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:6px;font:600 16px "Barlow",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn.acc{background:var(--acc);color:var(--on-acc)}
+.btn.ghost{border-color:currentColor;background:transparent;color:inherit}
+.hero{background:#111418;color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:0;bottom:0;width:260px;background:repeating-linear-gradient(-60deg,var(--acc) 0 14px,transparent 14px 40px);opacity:.9;transform:skewX(-8deg)}
+.hero .wrap{position:relative;z-index:1;padding-top:56px;padding-bottom:48px}
+.hero h1{font-size:clamp(54px,11vw,118px);max-width:9ch}
+.hero p{font-size:19px;max-width:32ch;margin:18px 0 26px;color:#d6d9de}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;flex-wrap:wrap;gap:8px 32px;margin-top:34px;font-weight:500;color:#d6d9de}
+.facts b{display:block;font:800 28px "Barlow Condensed",sans-serif;color:#fff}
+section{padding:52px 0 4px}
+h2{font-size:clamp(34px,5vw,48px)}
+.sub{color:var(--muted);margin:8px 0 22px;max-width:52ch}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.plan.hot{border:2px solid var(--acc)}
+.plan h3{font-size:26px}
+.plan .tag{color:var(--acc);font-weight:600;font-size:14px;min-height:21px}
+.plan .pr{font:800 44px "Barlow Condensed",sans-serif}
+.plan .pr small{font:500 16px "Barlow",sans-serif;color:var(--muted)}
+.plan ul{margin:8px 0 18px;padding-left:20px;color:var(--muted);flex:1}
+.note{margin-top:14px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+input,select{width:100%;min-height:48px;padding:0 12px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:400 16px "Barlow",sans-serif}
+.fld{margin-bottom:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#out{margin:6px 0 16px;min-height:72px}
+#out b{font:800 40px "Barlow Condensed",sans-serif;color:var(--acc)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:420px;background:var(--surface);border:1px solid var(--line)}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line)}
+th{font:700 15px "Barlow",sans-serif;color:var(--muted)}
+td:first-child{font:800 22px "Barlow Condensed",sans-serif;white-space:nowrap}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.coach{display:flex;gap:14px;align-items:center}
+.av{flex:none;width:56px;height:56px;border-radius:50%;background:var(--acc);color:var(--on-acc);display:grid;place-items:center;font:800 24px "Barlow Condensed",sans-serif}
+.coach h3{font-size:22px}
+.coach span{color:var(--muted);font-size:15px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.res div{border-top:4px solid var(--acc);padding-top:12px}
+.res b{display:block;font:800 26px "Barlow Condensed",sans-serif;text-transform:uppercase}
+.res span{color:var(--muted);font-size:15px}
+.hours{margin:0;padding:0;list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+footer{margin-top:52px;padding:26px 0;background:var(--surface);color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+#bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--head);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px}
+#bar .btn{flex:1;min-height:46px;padding:0 10px}
+@media (min-width:761px){#bar{display:none}body{padding-bottom:0}}
+@media (max-width:760px){
+nav a.hide{display:none}
+.plans,.two,.team,.res{grid-template-columns:1fr}
+.hero::after{width:90px;right:-30px}
+}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="logo" href="#top">Iron<b>Pulse</b> Fitness</a>
+<nav><a class="hide" href="#plans">Plans</a><a class="hide" href="#schedule">Classes</a><a class="hide" href="#tools">Calculator</a><a class="btn acc" style="min-height:40px;padding:0 16px" href="#trial">Free trial</a></nav>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+<div class="wrap">
+<h1>Get stronger every week</h1>
+<p>Strength floor, cardio, group classes and personal coaching in Jayanagar. Try one day free.</p>
+<div class="acts">
+<a class="btn acc" href="#trial">Book your free trial</a>
+<a class="btn ghost" href="tel:+919535759632" target="_blank" rel="noopener">Call the gym</a>
+</div>
+<div class="facts">
+<div><b>5:30 AM</b>Opens daily</div>
+<div><b>Certified</b>coaches on the floor</div>
+<div><b>No joining fee</b>this month</div>
+</div>
+</div>
+</div>
+
+<section id="plans">
+<div class="wrap">
+<h2>Membership plans</h2>
+<p class="sub">Every plan includes a free fitness assessment and a starter workout plan.</p>
+<div class="plans">
+<div class="plan"><div class="tag"></div><h3>Monthly</h3><div class="pr">₹1,500 <small>/ month</small></div><ul><li>Full gym access</li><li>All group classes</li><li>Free locker</li></ul><a class="btn ghost" href="https://wa.me/919535759632?text=Hi%20IronPulse%2C%20I%20want%20the%20Monthly%20plan." target="_blank" rel="noopener">Choose Monthly</a></div>
+<div class="plan hot"><div class="tag">Most popular</div><h3>Quarterly</h3><div class="pr">₹3,900 <small>/ 3 months</small></div><ul><li>Works out to ₹1,300 a month</li><li>Full gym and all classes</li><li>Body assessment every month</li></ul><a class="btn acc" href="https://wa.me/919535759632?text=Hi%20IronPulse%2C%20I%20want%20the%20Quarterly%20plan." target="_blank" rel="noopener">Choose Quarterly</a></div>
+<div class="plan"><div class="tag">Best value</div><h3>Annual</h3><div class="pr">₹11,999 <small>/ year</small></div><ul><li>Works out to ₹1,000 a month</li><li>2 personal training sessions</li><li>Freeze up to 15 days</li></ul><a class="btn ghost" href="https://wa.me/919535759632?text=Hi%20IronPulse%2C%20I%20want%20the%20Annual%20plan." target="_blank" rel="noopener">Choose Annual</a></div>
+</div>
+<p class="note">Personal training starts at ₹4,000 a month. Ask us about student and couple discounts.</p>
+</div>
+</section>
+
+<section id="trial">
+<div class="wrap">
+<div class="two">
+<div>
+<h2>Book a free trial</h2>
+<p class="sub">Tell us your goal and a good time. We will confirm on WhatsApp and a coach will show you around.</p>
+</div>
+<div class="card">
+<div class="fld"><label for="tn">Your name</label><input id="tn" class="tf" type="text" autocomplete="name" placeholder="Your name"></div>
+<div class="row2">
+<div class="fld"><label for="tg">Your goal</label><select id="tg" class="tf"><option>Lose weight</option><option>Build muscle</option><option>Get fitter</option><option>Learn the basics</option></select></div>
+<div class="fld"><label for="tt">Best time</label><select id="tt" class="tf"><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+</div>
+<a class="btn acc" id="tl" style="width:100%" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="schedule">
+<div class="wrap">
+<h2>Class timetable</h2>
+<p class="sub">Group classes are included in every plan.</p>
+<div class="tw"><table>
+<tr><th>Time</th><th>Class</th><th>Days</th></tr>
+<tr><td>6:00 AM</td><td>Strength training</td><td>Mon, Wed, Fri</td></tr>
+<tr><td>7:00 AM</td><td>Yoga and mobility</td><td>Tue, Thu, Sat</td></tr>
+<tr><td>6:00 PM</td><td>HIIT circuit</td><td>Mon, Wed, Fri</td></tr>
+<tr><td>7:00 PM</td><td>Zumba</td><td>Tue, Thu, Sat</td></tr>
+<tr><td>8:00 PM</td><td>Core and abs</td><td>Mon to Sat</td></tr>
+</table></div>
+</div>
+</section>
+
+<section id="tools">
+<div class="wrap">
+<div class="two">
+<div>
+<h2>BMI and calorie calculator</h2>
+<p class="sub">A quick check to start your plan. It is a general estimate for a moderately active adult, not medical advice.</p>
+</div>
+<div class="card">
+<div class="row2">
+<div class="fld"><label for="h">Height (cm)</label><input id="h" type="number" inputmode="decimal" placeholder="170"></div>
+<div class="fld"><label for="w">Weight (kg)</label><input id="w" type="number" inputmode="decimal" placeholder="70"></div>
+<div class="fld"><label for="a">Age</label><input id="a" type="number" inputmode="numeric" placeholder="25"></div>
+<div class="fld"><label for="s">Sex</label><select id="s"><option value="m">Male</option><option value="f">Female</option></select></div>
+</div>
+<div class="fld"><label for="gl">Goal</label><select id="gl"><option value="l">Lose weight</option><option value="m">Maintain</option><option value="g">Build muscle</option></select></div>
+<button class="btn acc" style="width:100%" id="calc">Calculate</button>
+<div id="out" aria-live="polite"></div>
+<a class="btn ghost" id="pl" style="width:100%;display:none" href="#" target="_blank" rel="noopener">Get a free plan on WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="team">
+<div class="wrap">
+<h2>Your coaches</h2>
+<p class="sub">Friendly, certified and always on the floor.</p>
+<div class="team">
+<div class="card coach"><div class="av">A</div><div><h3>Coach Arjun</h3><span>Strength and fat loss</span></div></div>
+<div class="card coach"><div class="av">M</div><div><h3>Coach Meera</h3><span>Yoga and mobility</span></div></div>
+<div class="card coach"><div class="av">K</div><div><h3>Coach Kiran</h3><span>Cardio and HIIT</span></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Member results</h2>
+<p class="sub">Real progress comes from showing up. Here is what our members say.</p>
+<div class="res">
+<div><b>Lost 9 kg in 4 months</b><span>Rahul, 27</span></div>
+<div><b>Back to lifting after a long break</b><span>Divya, 34</span></div>
+<div><b>Trained all year without missing a month</b><span>Suresh, 45</span></div>
+</div>
+</div>
+</section>
+
+<section id="visit">
+<div class="wrap">
+<h2>Visit us</h2>
+<div class="two" style="margin-top:20px">
+<div>
+<p>12, 5th Cross, Jayanagar 4th Block,<br>Bengaluru, Karnataka 560011<br>Phone: +91 95357 59632</p>
+<a class="btn acc" href="https://www.google.com/maps/search/?api=1&amp;query=Jayanagar+4th+Block+Bengaluru" target="_blank" rel="noopener">Get directions</a>
+</div>
+<ul class="hours">
+<li><span>Monday to Saturday</span><span>5:30 AM to 10:30 PM</span></li>
+<li><span>Sunday</span><span>7:00 AM to 1:00 PM</span></li>
+<li><span>Free parking</span><span>Yes</span></li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">IronPulse Fitness, Jayanagar 4th Block, Bengaluru. Sample website with placeholder details.</div></footer>
+
+<div id="bar"><a class="btn acc" href="#trial">Free trial</a><a class="btn ghost" href="tel:+919535759632" target="_blank" rel="noopener">Call</a></div>
+
+<script>
+var PH="919535759632";
+function g(i){return document.getElementById(i)}
+function wa(t){return "https://wa.me/"+PH+"?text="+encodeURIComponent(t)}
+function trial(){
+ var n=g("tn").value.trim()||"a new member";
+ g("tl").href=wa("Hi IronPulse, I am "+n+". I would like to book a free trial.\nGoal: "+g("tg").value+"\nBest time: "+g("tt").value);
+}
+Array.prototype.forEach.call(document.querySelectorAll(".tf"),function(e){e.addEventListener("input",trial)});
+trial();
+g("calc").addEventListener("click",function(){
+ var h=parseFloat(g("h").value),w=parseFloat(g("w").value),a=parseFloat(g("a").value),m=g("s").value==="m",gl=g("gl").value;
+ var o=g("out"),p=g("pl");
+ if(!(h>100&&h<250&&w>25&&w<250&&a>=14&&a<=90)){o.textContent="Please enter a valid height, weight and age.";p.style.display="none";return}
+ var bmi=w/Math.pow(h/100,2);
+ var cat=bmi<18.5?"Below the healthy range":bmi<25?"Healthy range":bmi<30?"Above the healthy range":"Well above the healthy range";
+ var bmr=10*w+6.25*h-5*a+(m?5:-161);
+ var kc=Math.round(bmr*1.55/10)*10;
+ if(gl==="l")kc-=400;
+ if(gl==="g")kc+=300;
+ kc=Math.max(kc,m?1500:1200);
+ o.innerHTML="Your BMI<br><b>"+bmi.toFixed(1)+"</b> "+cat+"<br>Daily calories to "+(gl==="l"?"lose weight":gl==="g"?"build muscle":"maintain")+": about <b>"+kc.toLocaleString("en-IN")+"</b>";
+ p.href=wa("Hi IronPulse, my BMI is "+bmi.toFixed(1)+" and my goal is to "+(gl==="l"?"lose weight":gl==="g"?"build muscle":"stay fit")+". Please share a free plan.");
+ p.style.display="inline-flex";
+});
+</script>
+</body>
+</html>
